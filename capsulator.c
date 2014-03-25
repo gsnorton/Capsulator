@@ -198,7 +198,7 @@ void capsulator_run(capsulator* c) {
 }
 
 #define BUFSZ (8 * 1024)
-#define MIN_ETH_LEN 60
+#define MIN_ETH_LEN 40
 #define MIN_IP_HEADER_LEN 20
 
 void* capsulator_thread_main_for_tunnel_port(void* vcapsulator) {
@@ -245,8 +245,7 @@ void* capsulator_thread_main_for_tunnel_port(void* vcapsulator) {
         else if(data_len < MIN_ETH_LEN) {
             verbose_println("%s TPH: Warning: ignoring tunnel packet of %u data bytes %s",
                             "(too small to include a tunneled packet containing a IP header + tunneling header + Ethernet frame)",
-                            c->tp.intf,
-                            data_len);
+                            data_len, c->tp.intf);
             continue;
         }
         else
