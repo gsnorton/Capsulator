@@ -16,7 +16,7 @@
 int get_ip_for_interface(char* intf_name) {
     struct ifconf ifc;
     struct ifreq ifrp[MAX_INTERFACES];
-    int fd, i, ret;
+    int fd, i, ret = 0;
 
     /* give ifc a buffer to populate */
     ifc.ifc_len = sizeof(ifrp);

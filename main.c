@@ -21,7 +21,7 @@ Capsulator v%s\n\
   -f, -forward_to:   comma-seperated list of IPs the tunnel should forward frames to\n\
   -b, -border_intf:  specifies a border interface and its tag (may be specified \n\
        multiple times; format is INTF#TAG ... ex: eth0#1248)\n\
-  -vb, -virtual_border_intf:  specifies a tap device name as border\n\ 
+  -vb, -virtual_border_intf:  specifies a tap device name as border\n\
        interface and its tag (may be specified multiple times; format is:\n\
        INTF#TAG ... ex: tap0#1248)\n\
   -a, -all:	broadcast packets to every ip addresses provided with -f\n\

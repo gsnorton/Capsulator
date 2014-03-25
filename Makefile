@@ -6,8 +6,8 @@
 # make clean  -- clean up byproducts
 
 # utility programs used by this Makefile
-CC   = gcc
-MAKE = gmake --no-print-directory
+CC   = clang
+MAKE = make --no-print-directory
 
 # set system-dependent variables
 OSTYPE = $(shell uname)
